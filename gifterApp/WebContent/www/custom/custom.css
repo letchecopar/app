@@ -56,7 +56,6 @@ ul.mui-list li{
 }
 
 
-
 /* solo listas con bordes redondeados
 ul.mui-list li:first-child {
 	border-style: solid;
@@ -84,6 +83,15 @@ ul.mui-list li.mui-list-disclosure  {
 	background-repeat: no-repeat;
 	background-origin: content-box;
 }
+
+ul.mui-list li.mui-list-disclosure .mui-list-con-imagenes  {	
+	color: #BFBFBF;
+	background-image: url('images/disclosure1.png');
+	background-position: right;
+	background-repeat: no-repeat;
+	background-origin: content-box;
+}
+
 /*Solo listas al 100% usadas iOS7*/
 ul.mui-list li:first-child {
 	border-style: solid;
@@ -153,7 +161,9 @@ ul.mui-list li.botonesDer {
 	background-position: center;
 }
 
-
+#mostrarRegalos{
+	
+}
 
 
 /*EJEMPLO DE BOTON ***********************************************************************************************/

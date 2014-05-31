@@ -166,22 +166,60 @@ function buttonPrompt() {
 
 
 function getRegalosPorEdad(param) {
-    $.ajax({
+	$.ajax({
         url:'http://localhost:8080/gifter/RegalosServlet',
         dataType: 'json',
         crossDomain: true,
         data:{
-            ws: 2
+            ws: 2,
+            dataType:"json"
             
         }
     })
         .done(function(data){
-            var obj=JSON.parse(data);
-            var ret = "";
+        	var obj = data;
+        	//document.getElementById("ejemploEdad").style.backgroundImage="url('img_tree.png')";
+        	var ret = "";
+        	
             for(var i = 0 ; i < obj.length ; i++){
-                ret = ret + obj[i].name+"<br>"+obj[i].description+"<br>"+obj[i].price;"</li>";
+            	ret = ret + "<li class='mui-clickable mui-list-disclosure mui-list-con-imagenes'> <span>"; 
+            	//adentro va a tener un span con la imagen, no se como hacerlo todavia
+            	ret = ret + obj[i].name+"<br>"+obj[i].description+"<br>"+obj[i].price+"</span>"+"<br>"+"</li>"+"<br>";
             }
-            $("#ejemploEdad").html(ret);
+            $("#list3").html(ret);
+            mui.viewPort.iScrollRefresh();
+            mui.viewPort.showPage("mui-viewport-page4", "SLIDE_LEFT");
+
+        })
+        .fail(function(jqXHR, textStatus, errorThrown){
+
+        });
+};
+
+
+function mostrarRegalo(idRegalo) {
+	$.ajax({
+        url:'http://localhost:8080/gifter/RegalosServlet',
+        dataType: 'json',
+        crossDomain: true,
+        data:{
+            ws: 2,
+            dataType:"json", 
+            idRegalo: idRegalo
+            
+        }
+    })
+        .done(function(data){
+        	var obj = data;
+        	//document.getElementById("ejemploEdad").style.backgroundImage="url('img_tree.png')";
+        	var ret = "";
+        	
+            for(var i = 0 ; i < obj.length ; i++){
+            	ret = ret + "<li class='mui-clickable mui-list-disclosure mui-list-con-imagenes'> <span>"; 
+            	//adentro va a tener un span con la imagen, no se como hacerlo todavia
+            	ret = ret + obj[i].name+"<br>"+obj[i].description+"<br>"+obj[i].price+"</span>"+"<br>"+"</li>"+"<br>";
+            }
+            $("#list3").html(ret);
             mui.viewPort.iScrollRefresh();
             mui.viewPort.showPage("mui-viewport-page4", "SLIDE_LEFT");
 
