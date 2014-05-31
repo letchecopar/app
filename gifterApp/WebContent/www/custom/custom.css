@@ -1,0 +1,363 @@
+/*Particulares*/
+body {
+	font-family: Helvetica;
+/*	font-family: "Helvetica Neue", HelveticaNeue, "Helvetica-Neue",
+		Helvetica, "BBAlpha Sans", sans-serif;*/
+}
+
+div#mui-viewport {
+	top: 0px;
+	bottom: 44px;
+}
+/*EJEMPLO NAVIGATOR BAR*******************************************************************************************/
+div.mui-page-header {
+	background-color: #3E3F43;
+}
+div.mui-page-header .mui-leftarrow {
+	height: 37px;	
+	padding-left: 30px;
+	padding-top: 12px;
+	position: relative;
+	margin: 0px auto;
+	color: #CC1C3B;
+	background-image: url('images/leftarrow.png');
+	background-repeat: no-repeat;
+	background-position: 10px 10.5px;
+}
+
+div.mui-page-header .mui-settings {
+	height: 37px;	
+	padding-left: 30px;
+	padding-top: 12px;
+	position: relative;
+	margin: 0px auto;
+	color: #CC1C3B;
+	background-image: url('../images/engranaje.png');
+	background-repeat: no-repeat;
+	background-position: 10px 10.5px;
+}
+ 
+/*EJEMPLO CON LISTA ***********************************************************************************/
+ul.mui-list {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	font-weight: bold;
+}
+
+ul.mui-list li{
+	height: 2,75em;
+	border-style: none solid solid solid;
+	border-width: 1px;
+	border-color: #A8A9AC;
+	background-color: #A09998;
+	/*position: relative;*/
+	
+}
+
+
+
+/* solo listas con bordes redondeados
+ul.mui-list li:first-child {
+	border-style: solid;
+	-webkit-border-radius: 10px 10px 0px 0px;
+	-moz-border-radius: 10px 10px 0px 0px;
+	 border-radius: 10px 10px 0px 0px;
+}
+ul.mui-list li:last-child {
+	border-style: none solid solid solid;
+	-webkit-border-radius: 0px 0px 10px 10px;
+	-moz-border-radius: 0px 0px 10px 10px;
+	 border-radius: 0px 0px 10px 10px;	
+}
+*/
+ul.mui-list li span {
+	display: block;
+	
+	padding: 0.815em 13px 0px 5px;
+}
+
+
+ul.mui-list li.mui-list-disclosure  {	
+	background-image: url('images/disclosure1.png');
+	background-position: right;
+	background-repeat: no-repeat;
+	background-origin: content-box;
+}
+/*Solo listas al 100% usadas iOS7*/
+ul.mui-list li:first-child {
+	border-style: solid;
+}
+
+ul.mui-list li:last-child {
+	border-style: none solid solid solid;
+}
+
+
+ul.mui-list li.botonesIzq {
+	height: 15em;
+	border-style: none solid solid solid;
+	border-width: 1px;
+	border-color: #A8A9AC;
+	background-color: #A09998;
+	position: relative;
+	width: 40%;
+	float:left;
+	clear:left;
+	
+	margin: 0% 0% 0% 7%;
+	text-align: center;
+	
+}
+
+ul.mui-list li.botonesDer {
+	height: 15em;
+	border-style: none solid solid solid;
+	border-width: 1px;
+	border-color: #A8A9AC;
+	background-color: #A09998;
+	position: relative;
+	width: 40%;
+	float: left;
+	
+	margin: 0% 7% 0% 0%;
+	text-align: center;
+		
+}
+
+#click1{
+	background-image: url('../images/caja_regalo.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#click2{
+	background-image: url('../images/caja_3_regalo.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#click3{
+	background-image: url('../images/locales.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#click4{
+	background-image: url('../images/regalos_popu.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+
+
+/*EJEMPLO DE BOTON ***********************************************************************************************/
+.mui-button {
+	border: medium none;
+	border-radius: 6px 6px 6px 6px;
+	color: #FFFFFF;
+	text-decoration: none;
+	transition: all 0.25s linear 0s;
+	font-size: 1.35em;
+	line-height: 1.35emx;
+	padding: 15px 20px 16px;
+}
+/*EJEMPLO DE TABBAR ***********************************************************************************************/
+div.mui-tabbar {
+	width: 100%;
+	height: 3em;
+	position: absolute;
+	bottom: 0px;
+	background-color: #3E3F43;
+	z-index: 10;
+}
+
+div.mui-tabbar ul.mui-tabbar-list {
+	list-style: none;
+	padding: 0px;
+	margin: auto;
+}
+
+div.mui-tabbar ul.mui-tabbar-list li.muy-tabbar-button {
+	height: 2.75em;
+	padding: 0px;
+	margin: 0px;
+	/*border: #3498db solid 1px;*/
+	float: left;
+}
+/*EJEMPLO DE LISTADO DE CONTENIDOS *********************************************************************************/
+ul.content-list {
+	list-style: none;
+}
+
+ul.content-list li {
+	width: 100%;
+	height: auto;
+}
+
+ul.content-list li.withimg {
+	min-height: 5em;
+}
+
+ul.content-list li img {
+	position: absolute;
+	max-width: 4.375em;
+	padding: 5px;
+}
+
+ul.content-list li div {
+	padding: 5px;
+}
+
+ul.content-list li.withimg div {
+	padding-left: 10px;
+}
+
+ul.content-list li.withimg>div {}
+
+ul.content-list li div.content-title {}
+
+ul.content-list li div.content-description {
+	font-weight: normal;
+}
+/*SOLO PARA ESTE CASO***********************************************************************************************/
+/*Páginas*/
+.mui-page {
+	background: #ffffff;
+	padding: 0px;
+}
+
+div.mui-page-element-sep {
+	font-weight: bold;
+	background-color: #ecf0f1;
+	height: 1.75em;
+	padding: 0.815em 13px 0px 5px;
+}
+
+div.home-page-picture {
+	height: 7.5em;
+	overflow: hidden;
+	text-align: center;
+	background-image: url('../borrar/madre.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+div.home-page-picture img {
+	height: 100%;
+	margin: auto;
+}
+
+div#mui-viewport-page1 div.mui-page-header {
+	background-color: #3E3F43;
+	/*background-image: url('../images/b.png'), -webkit-gradient(linear, 50.0% 0.0, 50.0% 100.0%, from(rgb(3,121,246)), to(rgb(1,65,132)), color-stop(0.499,rgb(2,86,176)), color-stop(0.501,rgb(2,81,164)));*/
+	background-image: url('../images/bow.jpg');
+	background-position: center;
+	background-repeat: no-repeat, repeat-x;
+	background-size: 121px 28px;
+}
+/*Listas general*/
+ul.mui-list li:HOVER {
+	background: #878686;
+	color: white;
+	
+}
+/*Lista de la home*/
+div#mui-viewport-page1 ul#list1 li img {
+	width: 29px;
+	height: 25px;
+	
+	vertical-align: middle;
+}
+/*Cover shild personalizado*/
+.mui-cover-shild { /*	
+	-webkit-filter: blur(20px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+    */
+	opacity: 0.5;
+	bgOpacity: 0.5;
+	filter: alpha(opacity =   50); /* For IE8 and earlier */
+	/*background-color:lightblue;*/
+	z-index: 5;
+}
+/*Botones del tabbar*/
+div.mui-tabbar ul.mui-tabbar-list {
+	max-width: 480px;
+}
+
+div.mui-tabbar ul.mui-tabbar-list li {
+	width: 25%;
+	background-repeat: no-repeat;
+	background-position: center 5px;
+	text-align: center;
+	margin: auto;
+	
+	/*inner width*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.mui-tabbar ul.mui-tabbar-list li:HOVER {
+	/*background-position: center -40px;*/
+	background-color: #CDD8DA;
+}
+
+div.mui-tabbar ul.mui-tabbar-list li:FIRST-CHILD {
+	background-image: url('../images/account.jpg');
+}
+
+div.mui-tabbar ul.mui-tabbar-list li:nth-child(2) {
+	background-image: url('../images/heart.jpg');
+}
+
+div.mui-tabbar ul.mui-tabbar-list li:nth-child(3) {
+	background-image: url('../images/star.jpg');
+}
+
+div.mui-tabbar ul.mui-tabbar-list li:nth-child(4) {
+	background-image: url('../images/help.jpg');
+}
+
+div.mui-tabbar ul.mui-tabbar-list li span {
+	font-size: 0.75em;
+	position: relative;
+	top: 28px;
+	color: #BFBFBF;
+}
+/*Panel personalizado*/
+.mui-panel {
+	width: 70%;
+	max-width: 320px;
+	top: 0px;
+	bottom: 0px;
+	background-color: #3E3F43;
+	opacity: 0.9;
+	bgOpacity: 0.9;
+	filter: alpha(opacity =   90); /* For IE8 and earlier */
+	color: #white;
+	z-index: 10;
+}
+
+#panelSettings {
+	background-color: #000000;
+}
+
+ul.mui-list li.mui-list-settings{
+	background-color: #000000;
+	color: white;
+	border: none;
+}
+
+.mui-button {
+	background-color: #1ABC9C;
+	margin: 10px;
+}
