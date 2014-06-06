@@ -8,8 +8,6 @@ import java.util.LinkedList;
 
 import DAO.RegaloDAO;
 
-import com.mysql.jdbc.Statement;
-
 public class RegaloDaoDB implements RegaloDAO{
 	
 	SQLConnection pool = new SQLConnection();
@@ -22,43 +20,43 @@ public class RegaloDaoDB implements RegaloDAO{
 		return instance;
 	}
 
-	@Override
-	public void crearRegalo(RegaloDaoImpl o){
-		
-		int id_regalo = o.getId_producto();
-		int id_local = o.getId_local();
-		String name = o.getNombre();
-		String description = o.getDescripcion();
-		double price = o.getPrecio();
-		int edad_min = o.getEdad_min();
-		int edad_max = o.getEdad_max();
-		String foto = o.getFoto();
-		int puntaje = o.getPuntaje();
-		
-		try {
-			 Connection con = SQLConnection.getConnection();
-			 String sql = "INSERT INTO producto VALUES(null,"+ id_local+","+price+","+puntaje+","+description+","+name+","+foto+","+edad_max+","+edad_min+")";
-			 PreparedStatement ps = con.prepareStatement(sql);
-			 ResultSet res = ps.executeQuery();
-			 res.close();
-			 ps.close();
-			 con.close();
-		} catch (InstantiationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-			
-
-	}
+//	@Override
+//	public void crearRegalo(RegaloDaoImpl o){
+//		
+//		int id_regalo = o.getId_producto();
+//		int id_local = o.getId_local();
+//		String name = o.getNombre();
+//		String description = o.getDescripcion();
+//		double price = o.getPrecio();
+//		int edad_min = o.getEdad_min();
+//		int edad_max = o.getEdad_max();
+//		String foto = o.getFoto();
+//		int puntaje = o.getPuntaje();
+//		
+//		try {
+//			 Connection con = SQLConnection.getConnection();
+//			 String sql = "INSERT INTO producto VALUES(null,"+ id_local+","+price+","+puntaje+","+description+","+name+","+foto+","+edad_max+","+edad_min+")";
+//			 PreparedStatement ps = con.prepareStatement(sql);
+//			 ResultSet res = ps.executeQuery();
+//			 res.close();
+//			 ps.close();
+//			 con.close();
+//		} catch (InstantiationException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (IllegalAccessException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (ClassNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//			
+//
+//	}
 
 	@Override
 	public LinkedList<Object> getRegalosPorEdad(int edad1, int edad2) {

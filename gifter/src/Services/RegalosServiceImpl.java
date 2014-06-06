@@ -10,11 +10,7 @@ import Entities.Regalo;
 
 public class RegalosServiceImpl {
 
-	//llama al metodo que agrega el regalo a la DB
-	public void crearRegalo(Regalo reg){
-		RegaloDaoImpl dao = new RegaloDaoImpl(reg.getId(), reg.getId_local(), reg.getPrice(), reg.getPuntaje(), reg.getDescription(), reg.getName(), reg.getEdad_min(), reg.getEdad_max());
-		RegaloDaoDB.getInstance().crearRegalo(dao);
-	}
+	
 	
 	public LinkedList getRegalosPorEdad(int e1, int e2) {
 		 LinkedList<Object> regalo= RegaloDaoDB.getInstance().getRegalosPorEdad(e1, e2);
